@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "161151251288",
+    "firebase_url": "https://bd-all-newspaper-default-rtdb.firebaseio.com",
+    "project_id": "bd-all-newspaper",
+    "storage_bucket": "bd-all-newspaper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161151251288:android:97f9c7f040b8f88fcf6b2d",
+        "android_client_info": {
+          "package_name": "com.bd.allnewspaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161151251288-8ia5ee6s6u0b8l2rscgrdmvsh0clrdpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP2HZ8XQ7MvnxWOJIw2ZqiLwitqzi1hZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161151251288-8ia5ee6s6u0b8l2rscgrdmvsh0clrdpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161151251288:android:b9d572dd277647cacf6b2d",
+        "android_client_info": {
+          "package_name": "com.bdallnews.notificationsender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161151251288-8ia5ee6s6u0b8l2rscgrdmvsh0clrdpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP2HZ8XQ7MvnxWOJIw2ZqiLwitqzi1hZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161151251288-8ia5ee6s6u0b8l2rscgrdmvsh0clrdpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

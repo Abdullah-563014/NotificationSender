@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NotificationSender</string>
+
+
+    <string name="forground_service">My Forground Service</string>
+    <string name="notification_tracking_service">Notification Tracking Service</string>
+    <string name="notification_tracking">Notification Tracking</string>
+    <string name="watching_notification">We are trying to find out new notification</string>
+</resources>
