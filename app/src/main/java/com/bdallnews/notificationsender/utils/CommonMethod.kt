@@ -8,6 +8,7 @@ import org.json.JSONObject
 import java.io.OutputStream
 import java.net.HttpURLConnection
 import java.net.URL
+import java.text.SimpleDateFormat
 import java.util.*
 
 object CommonMethod {
@@ -26,6 +27,7 @@ object CommonMethod {
 
     fun sendNotification(title: String?, description: String?, targetUrl: String?): String? {
         val message: String=if (description.isNullOrEmpty()) "Click here for more details." else description
+        val time: String= getCurrentTimeUsingFormat("hh:mm:ss:a - dd/MM/yyyy")
         if (title!=null && targetUrl!=null) {
             try {
                 var jsonResponse: String
@@ -45,14 +47,15 @@ object CommonMethod {
                         "    \"included_segments\": [\"Subscribed Users\"],\n" +
                         "    \"headings\": {\"en\":\"$title\"},\n" +
                         "    \"app_url\":\"$targetUrl\",\n" +
+                        "    \"data\":{\"sendingTime\":\"$time\",\"developedBy\":\"EasySoftBd\"}\n" +
                         "    \"contents\":{\"en\":\"$message\"}\n" +
                         "}")
 
-                var sendBytes: ByteArray= notificationObject.toString().toByteArray(Charsets.UTF_8)
+                val sendBytes: ByteArray= notificationObject.toString().toByteArray(Charsets.UTF_8)
                 con.setFixedLengthStreamingMode(sendBytes.size)
-                var outputStream: OutputStream=con.outputStream
+                val outputStream: OutputStream=con.outputStream
                 outputStream.write(sendBytes)
-                var httpResponse: Int=con.responseCode
+                val httpResponse: Int=con.responseCode
                 outputStream.close()
                 if (httpResponse>=HttpURLConnection.HTTP_OK && httpResponse < HttpURLConnection.HTTP_BAD_REQUEST) {
                     val scanner: Scanner= Scanner(con.inputStream,"UTF-8")
@@ -70,6 +73,11 @@ object CommonMethod {
             }
         }
         return null
+    }
+
+    fun getCurrentTimeUsingFormat(format: String): String {
+        val dateFormat: SimpleDateFormat = SimpleDateFormat(format, Locale.getDefault())
+        return dateFormat.format(Date()).toString()
     }
 
 

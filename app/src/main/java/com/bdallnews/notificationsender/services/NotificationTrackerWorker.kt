@@ -32,7 +32,7 @@ class NotificationTrackerWorker(appContext: Context, workerParams: WorkerParamet
                 }
             }
             if (!flag) {
-                CommonMethod.sendNotification(data.getString(Constants.title),data.getString(Constants.message),data.getString(Constants.url))
+                CommonMethod.sendNotification(data.getString(Constants.title),"${data.getString(Constants.title)}... Click here for more details",data.getString(Constants.url))
                 (applicationContext as MyApp).appDatabase.notificationDao().insertNotificationModel(NotificationModel(null,data.getString(Constants.title),data.getString(Constants.message),data.getString(Constants.url)))
             }
             if (allNotification.size>=200) {
